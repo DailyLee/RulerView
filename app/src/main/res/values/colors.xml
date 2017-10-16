@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 测量时段背景色 -->
+    <color name="measure_color_dark">#ffb359</color>
+    <color name="measure_normal_value">#7DA8EF</color>
+    <color name="measure_abnormal_value">#FFB2C2</color>
+</resources>

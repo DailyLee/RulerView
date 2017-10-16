@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/number_picket_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@mipmap/icon_subtraction" />
+
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/XL"
+        android:layout_marginRight="@dimen/XL">
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:focusableInTouchMode="true"/>
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:imeOptions="actionSearch"
+                android:inputType="number|numberDecimal"
+                android:maxLength="5"
+                android:textColor="#0cb7f5"
+                android:textCursorDrawable="@null"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="kg"
+                android:textColor="#0cb7f5"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/number_picket_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@mipmap/icon_additive" />
+
+</LinearLayout>
