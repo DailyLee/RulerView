@@ -1,3 +1,3 @@
 # RulerView
-Hencoder仿写投稿薄荷健康
+效果图
 ![image](https://github.com/DailyLI/RulerView/tree/master/app/gif/rulerView.gif)
