@@ -251,9 +251,6 @@ public class ColorRuler extends View implements IRulerActionStandard {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_UP) {
-            scrollToMiddle();
-        }
         return mGestureDetector.onTouchEvent(event);
     }
 
@@ -271,6 +268,9 @@ public class ColorRuler extends View implements IRulerActionStandard {
 
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            if (e2.getAction() == MotionEvent.ACTION_UP) {
+                scrollToMiddle();
+            }
             int dis = (int) (distanceX * mVelocity);
             if (mScroller.getFinalX() > mDistance) {
                 mScroller.startScroll(mDistance, 0, 0, 0);
@@ -324,9 +324,10 @@ public class ColorRuler extends View implements IRulerActionStandard {
         if (mScroller.computeScrollOffset()) {
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             postInvalidate();
-        } else {
-            scrollToMiddle();
-            //postInvalidate();
+
+            if (!mScroller.computeScrollOffset()){
+                scrollToMiddle();
+            }
         }
     }
 
@@ -341,6 +342,7 @@ public class ColorRuler extends View implements IRulerActionStandard {
             } else {
                 mScroller.startScroll(mScroller.getFinalX(), mScroller.getFinalY(), -offSet, 0);
             }
+            postInvalidate();
         }
     }
 
